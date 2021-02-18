@@ -17,18 +17,19 @@ function arrayDestructuring() {
     let arr = ["Margaery", "Tyrell"]
 
     //1. Destructor this array to firstName and lastName
+    let [firstName, lastName] = arr;
 
     //2. Display it  [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_arr.innerHTML = `Hello , I am firstName lastName `
+    des_arr.innerHTML = `Hello , I am ${firstName} ${lastName} `
 
 
     // we have an array with the name and surname
-    let str = "Margaery Tyrell"
+    let str = "Margaery Tyrell";
 
     //1. Destructor this string array to firstName and lastName by using split() method of string object
-
+    [firstName,lastName]= str.split(" ");
     //2. Display it [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_string.innerHTML = `Hello , I am firstName lastName `
+    des_string.innerHTML = `Hello , I am ${firstName} ${lastName} `
 
 
 
@@ -42,15 +43,15 @@ function objectDestructuring() {
     let person = { firstName: "John", lastName: "Smith" }
 
     //1. Destructor this object to firstName and lastName 
-
+    let{firstName,lastName} = person
     //2. Display it [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_obj1.innerHTML = `Hi , I am firstName lastName `
+    des_obj1.innerHTML = `Hi , I am ${firstName} ${lastName} `
 
 
     //1. Destructor this object to fName and sName [different naming]
-
+    let {firstName:fName, lastName:sName} = person 
     //2. Display it [Replace it with ${Name} ${lName} once you have the variables]
-    des_obj2.innerHTML = `Hi , I am fName lName `
+    des_obj2.innerHTML = `Hi , I am ${fName} ${sName} `
 
 
 }
