@@ -76,13 +76,13 @@ function spreadSyntax() {
 function restSyntax() {
 
     //The Numbers to add 
-    const {x1,x2,...rest}={
-    const x1: 1,
-    const x2 : 1,
-    const x3 : 1,
-    const x4 : 1,
-    const x5 : 1
-    }
+   
+    const x1 = 1;
+    const x2 = 1;
+    const x3 = 1;
+    const x4 = 1;
+    const x5 = 1;
+
     //Make the function to support rest so that it can add 5 numbers
     const result = sumRest(x1, x2,...rest);
 
