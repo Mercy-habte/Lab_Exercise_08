@@ -62,7 +62,7 @@ function spreadSyntax() {
     const arr = [1, 2, 3, 4]
 
     //1. Pass the array using spread syntax
-    const result = sum1();
+    const result = sumSpread(...arr);
 
     //Display it 
     spread_syntax.innerHTML = `The Sum is : ${result} `
@@ -76,14 +76,15 @@ function spreadSyntax() {
 function restSyntax() {
 
     //The Numbers to add 
-    const x1 = 1;
-    const x2 = 1;
-    const x3 = 1;
-    const x4 = 1;
-    const x5 = 1;
-
+    const {x1,x2,...rest}={
+    const x1: 1,
+    const x2 : 1,
+    const x3 : 1,
+    const x4 : 1,
+    const x5 : 1
+    }
     //Make the function to support rest so that it can add 5 numbers
-    const result = sum2(x1, x2, x3, x4, x5);
+    const result = sumRest(x1, x2,...rest);
 
     //Display it 
     rest_syntax.innerHTML = `The Sum is : ${result} `
@@ -92,7 +93,7 @@ function restSyntax() {
 
 }
 //Function that add 4 numbers 
-function sum1(x1, x2, x3, x4) {
+function sumSpread(x1, x2, x3, x4) {
 
     return x1 + x2 + x3 + x4;
 
@@ -102,11 +103,11 @@ function sum1(x1, x2, x3, x4) {
 
 
 //3. Make this function to support rest, and add 5 numbers
-function sum2(x1, x2) {
+function sumRest(x1, x2, ...rest) {
 
     //4. Function that add 5 numbers [Consider Adding the arr[0], arr[1], arr[2]]
 
-    return x1 + x2;
+    return x1 + x2 + x3 + x4 + x5;
 
 
 }
