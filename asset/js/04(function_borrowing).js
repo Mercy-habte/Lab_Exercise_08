@@ -30,7 +30,7 @@ function usingCall() {
 
     //1. Borrow fullName using call
     //2. Pass call_demo[as ui_place] , Hi I am ,[message]
-
+    Brad.fullName.call(Cerscy, call_demo, "Hi I am");
 
 }
 
@@ -44,8 +44,8 @@ function usingApply() {
 
     //1. Borrow fullName using apply
     //2. Pass apply_demo[as ui_place] and Hi I am ,[as message] as array
-
-
+    arr = [apply_demo, "Hi I am"]
+    Brad.fullName.apply(Jon, arr);
 }
 
 function usingBind() {
@@ -58,6 +58,7 @@ function usingBind() {
 
     //1. Borrow fullName using bind
     //2. Pass bind_demo[as ui_place] , Hi I am ,[as message]
-
+    let fullName2 =  Brad.fullName.bind(Daenerys);
+    fullName2( bind_demo,'Hi i am');
 
 }
